@@ -23,4 +23,5 @@
   - [Fibonacci.ts](src/Fibonacci.ts) 斐波那契数列的多种实现算法
     - 自下而上实现
     - 递归实现
+  - [FindWhirlingArrayMinVal.ts](src/FindWhirlingArrayMinVal.ts) 寻找旋转数组中的最小数字
   
