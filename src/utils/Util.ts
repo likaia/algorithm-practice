@@ -73,3 +73,23 @@ export function lesserEquals<T>(
   const comp = compareFn(a, b);
   return comp === Compare.LESS_THAN || comp === Compare.EQUALS;
 }
+
+// 数位之和 - 转字符串实现
+export function sumOfDigits(target: number): number {
+  let finalVal = 0;
+  const computeVal = target.toString();
+  for (let i = 0; i < computeVal.length; i++) {
+    finalVal += Number(computeVal[i]);
+  }
+  return finalVal;
+}
+
+// 数位之和 - 模运算实现
+export function sumOfDigitsForModular(target: number): number {
+  let finalVal = 0;
+  while (target > 0) {
+    finalVal += Math.floor(target % 10);
+    target /= 10;
+  }
+  return finalVal;
+}
