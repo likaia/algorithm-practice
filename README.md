@@ -25,5 +25,7 @@
     - 递归实现
   - [FindWhirlingArrayMinVal.ts](src/FindWhirlingArrayMinVal.ts) 寻找旋转数组中的最小数字
   - [Backtracking.ts](src/Backtracking.ts) 回溯法的应用
-  - [DynamicProgramming](src/DynamicProgramming.ts) 动态规划的应用
-    - 剪绳子
+    - 矩阵中的路径
+    - 机器人的运动范围
+- [DynamicProgramming](src/DynamicProgramming.ts) 动态规划的应用
+  - 剪绳子

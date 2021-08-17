@@ -1,9 +1,14 @@
-export default class Backtracking {
+import { sumOfDigits } from "./utils/Util.ts";
+
+export default class Backtracking<T> {
   // 目标路径在矩阵中的索引
   private readonly pathIndex: Array<string>;
+  // 机器人的行走路线
+  public path: string;
 
   constructor() {
     this.pathIndex = [];
+    this.path = "";
   }
   /**
    * 寻找矩阵中的路径
@@ -60,6 +65,89 @@ export default class Backtracking {
     // 未找到
     this.pathIndex.push("目标路径不存在于矩阵中");
     return this.pathIndex;
+  }
+
+  /**
+   * 题目：
+   * 地上有一个m行n列的方格。
+   * 一个机器人从坐标（0，0）的格子开始移动，
+   * 它每次可以向左、右、上、下移动一格，但不能进入行坐标和列坐标的数位之和大于k的格子。
+   * 例如，当k为18时，机器人能够进入方格 （35，37），因为3+5+3+7=18。
+   * 但它不能进入方格（35，38），因为3+5+3+8=19. 请问该机器人能够到达多少个格子？
+   * @param matrix 矩阵
+   * @param threshold 临界点(最大活动范围)
+   */
+  public movingCount(matrix: Array<Array<T>>, threshold = 0): number {
+    if (threshold < 0 || matrix.length <= 0) {
+      return 0;
+    }
+    // 获取方格的总行数与总列数
+    const rows = matrix.length;
+    const cols = matrix[0].length;
+    // 创建标记数组，用于标识格子是否被访问
+    const isVisited: Array<Array<boolean>> = new Array(rows);
+    for (let i = 0; i < isVisited.length; i++) {
+      isVisited[i] = new Array(cols);
+    }
+    // 从0,0位置开始移动，计算总的移动格子数量
+    return this.startMoving(rows, cols, 0, 0, threshold, isVisited, matrix);
+  }
+
+  /**
+   * 开始移动机器人
+   * @param rows 矩阵总行数
+   * @param cols 矩阵总列数
+   * @param row 待进入格子的行坐标
+   * @param col 待进入格子的列坐标
+   * @param threshold 最大活动范围
+   * @param isVisited 访问标识矩阵
+   * @param matrix 路径矩阵
+   * @private
+   */
+  private startMoving(
+    rows: number,
+    cols: number,
+    row: number,
+    col: number,
+    threshold: number,
+    isVisited: Array<Array<boolean>>,
+    matrix: Array<Array<T>>
+  ): number {
+    // 边界条件判断
+    if (
+      row >= rows ||
+      row < 0 ||
+      col >= cols ||
+      col < 0 ||
+      isVisited[row][col] ||
+      !this.checkPath(row, col, threshold)
+    ) {
+      return 0;
+    }
+    // 记录当前访问的格子内容
+    this.path += `${matrix[row][col]} -> `;
+    // 标识当前格子已被访问
+    isVisited[row][col] = true;
+    // 格子访问数量+1
+    return (
+      1 +
+      this.startMoving(rows, cols, row + 1, col, threshold, isVisited, matrix) +
+      this.startMoving(rows, cols, row, col + 1, threshold, isVisited, matrix) +
+      this.startMoving(rows, cols, row - 1, col, threshold, isVisited, matrix) +
+      this.startMoving(rows, cols, row, col - 1, threshold, isVisited, matrix)
+    );
+  }
+
+  /**
+   * 判断机器人能否进入目标格子
+   * @param row 行坐标
+   * @param col 列坐标
+   * @param target 临界点
+   * @private
+   */
+  private checkPath(row: number, col: number, target: number): boolean {
+    // 两坐标的数位之和必须小于等于临界点
+    return sumOfDigits(row) + sumOfDigits(col) <= target;
   }
 
   /**
