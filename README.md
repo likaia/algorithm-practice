@@ -30,3 +30,4 @@
 - [DynamicProgramming](src/DynamicProgramming.ts) 动态规划的应用
   - 剪绳子
 - [BinaryOperation](src/BinaryOperation.ts) 二进制运算
+- [IntegerPower](src/IntegerPower.ts) 数值的整数次方
