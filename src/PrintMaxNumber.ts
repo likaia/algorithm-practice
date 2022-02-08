@@ -17,13 +17,20 @@ export default class PrintMaxNumber {
   public maxNumberToStr(n: number): void {
     if (n <= 0) return;
     const numberStr: string[] = [];
+    // 控制数字最高位的排列(0 ~ 9)
     for (let i = 0; i < 10; i++) {
       numberStr[0] = i + "0";
       this.printToMaxRecursively(numberStr, n, 0);
     }
   }
 
-  // 递归获取最大值
+  /**
+   * 递归获取最大值
+   * @param numStr 数字位数组
+   * @param length 数字位数
+   * @param index 当前位
+   * @private
+   */
   private printToMaxRecursively(
     numStr: string[],
     length: number,
@@ -31,16 +38,23 @@ export default class PrintMaxNumber {
   ): void {
     if (index === length - 1) {
       // 打印
-      this.printNumber(numStr);
+      PrintMaxNumber.printNumber(numStr);
       return;
     }
+    // 控制数字其他位的排列（0 ~ 9）
     for (let i = 0; i < 10; i++) {
-      numStr[index + 1] = i + "0";
-      this.printToMaxRecursively(numStr, length, index + 1);
+      const nextIndex = index + 1;
+      numStr[nextIndex] = i + "0";
+      this.printToMaxRecursively(numStr, length, nextIndex);
     }
   }
 
-  private printNumber(numStr: string[]): void {
+  /**
+   * 输出数字位数组中的有效数字
+   * @param numStr
+   * @private
+   */
+  private static printNumber(numStr: string[]): void {
     const nLength = numStr.length;
     let remove0Val = "";
 
