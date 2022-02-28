@@ -11,6 +11,9 @@ export class Node<T> {
   }
 }
 
+// 链表节点
+export type ListNode = { element: number; next: ListNode | null };
+
 // 助手类：用于表示双向链表中的结点元素
 export class DoublyNode<T> extends Node<T> {
   prev: any;
@@ -20,5 +23,15 @@ export class DoublyNode<T> extends Node<T> {
     super(element, next);
     // 新增prev属性，指向链表元素的上一个元素
     this.prev = prev;
+  }
+}
+
+export function printListNode(pHead: ListNode | null): void {
+  if (pHead == null) return;
+  console.log(pHead.element);
+  let pNode = pHead.next;
+  while (pNode != null) {
+    console.log(pNode.element);
+    pNode = pNode.next;
   }
 }

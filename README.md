@@ -32,3 +32,6 @@
 - [BinaryOperation](src/BinaryOperation.ts) 二进制运算
 - [IntegerPower](src/IntegerPower.ts) 数值的整数次方
 - [PrintMaxNumber](src/PrintMaxNumber.ts) 打印从1到最大的n位数
+- [DeleteLinkedListNode](src/DeleteLinkedListNode.ts) 删除链表节点
+  - 用O(1)的时间复杂度删除链表节点
+  - 删除链表中的重复节点
