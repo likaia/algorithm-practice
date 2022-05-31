@@ -38,3 +38,5 @@
 - [RegExprMatch](src/RegExprMatch.ts) 正则表达式匹配
 - [NumericalCheck](src/NumericalCheck.ts) 数值校验算法
 - [AdjustArrayOrder](src/AdjustArrayOrder.ts) 调整数组顺序算法
+- [GetLinkedListNode](src/GetLinkedListNode.ts) 获取链表节点
+  - 获取倒数第K个节点
