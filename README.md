@@ -40,3 +40,4 @@
 - [AdjustArrayOrder](src/AdjustArrayOrder.ts) 调整数组顺序算法
 - [GetLinkedListNode](src/GetLinkedListNode.ts) 获取链表节点
   - 获取倒数第K个节点
+  - 寻找环的入口节点
