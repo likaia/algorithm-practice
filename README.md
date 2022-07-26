@@ -45,3 +45,4 @@
 - [MergeLinkedList](src/MergeLinkedList.ts) 合并两个排序的链表
 - [TreeSubstructure](src/TreeSubstructure.ts) 树的子结构
 - [MirrorImageOfTree](src/MirrorImageOfTree.ts) 树的镜像
+- [SymmetricBinaryTree](src/SymmetricBinaryTree.ts) 对称的二叉树
