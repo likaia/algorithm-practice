@@ -33,7 +33,7 @@
 - [IntegerPower](src/IntegerPower.ts) 数值的整数次方
 - [PrintMaxNumber](src/PrintMaxNumber.ts) 打印从1到最大的n位数
 - [DeleteLinkedListNode](src/DeleteLinkedListNode.ts) 删除链表节点
-  - 用O(1)的时间复杂度删除链表节点
+  - 用O(1)的时间复杂度删除链表节  点
   - 删除链表中的重复节点
 - [RegExprMatch](src/RegExprMatch.ts) 正则表达式匹配
 - [NumericalCheck](src/NumericalCheck.ts) 数值校验算法
@@ -46,3 +46,4 @@
 - [TreeSubstructure](src/TreeSubstructure.ts) 树的子结构
 - [MirrorImageOfTree](src/MirrorImageOfTree.ts) 树的镜像
 - [SymmetricBinaryTree](src/SymmetricBinaryTree.ts) 对称的二叉树
+- [PrintMatrix](src/PrintMatrix.ts) 顺时针打印矩阵
