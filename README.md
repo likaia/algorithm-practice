@@ -49,3 +49,4 @@
 - [PrintMatrix](src/PrintMatrix.ts) 顺时针打印矩阵
 - [StackContainingMinFunction](src/StackContainingMinFunction.ts) 包含min函数的栈
 - [StackPushAndPopSequence](src/StackPushAndPopSequence.ts) 栈的压入/弹出序列
+- [DataConversion](src/DataConversion.ts) 字符串数组转树结构
