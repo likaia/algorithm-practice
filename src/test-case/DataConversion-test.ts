@@ -1,17 +1,18 @@
 import { DataConversion } from "../DataConversion.ts";
 
-const textArr = [
-  "Language",
-  "  JavaScript",
-  "    TypeScript",
-  "    NodeJS",
-  "  HTML",
-  "Server",
-  "  DataBase",
-  "    MongoDB",
-  "System",
-  "  Linux",
-  "  Window"
-];
+const text = `
+Language
+  JavaScript
+    TypeScript
+    NodeJS
+  HTML
+Server
+  DataBase
+    MongoDB
+System
+  Linux
+  Window
+`;
 
-DataConversion(textArr);
+const textJSON = DataConversion(text);
+console.log(JSON.stringify(textJSON));
