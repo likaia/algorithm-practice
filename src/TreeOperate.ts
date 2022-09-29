@@ -1,5 +1,7 @@
 import { Node } from "./lib/Node.ts";
 import BinarySearchTree from "./lib/BinarySearchTree.ts";
+import Queue from "./lib/Queue.ts";
+import { treeNode } from "./type/TreeModuleType.ts";
 
 export class TreeOperate<T> {
   /**
@@ -117,5 +119,46 @@ export class TreeOperate<T> {
       currentNode = currentNode.parent;
     }
     return null;
+  }
+
+  /**
+   * 按层遍历二叉树
+   *  1. 创建一个队列用于存储树节点
+   *  2. 将跟节点入栈, 遍历队列
+   *    (1). 获取队首元素，执行回调函数
+   *    (2). 队首元素的左子树或右子树不为null则将其入队
+   */
+  traverseByLayer(tree: Node<T>, callback: (key: T) => void): void {
+    const nodeQueue = new Queue();
+    nodeQueue.enqueue(tree);
+    while (!nodeQueue.isEmpty()) {
+      const teamLeader = nodeQueue.dequeue();
+      callback(teamLeader.key);
+      if (teamLeader.left) {
+        nodeQueue.enqueue(teamLeader.left);
+      }
+      if (teamLeader.right) {
+        nodeQueue.enqueue(teamLeader.right);
+      }
+    }
+  }
+
+  /**
+   * 按层遍历树结构数据
+   * @param tree
+   * @param callback
+   */
+  treeDataByLayer(tree: treeNode<T>, callback: (key: T) => void): void {
+    const nodeQueue = new Queue();
+    nodeQueue.enqueue(tree);
+    while (!nodeQueue.isEmpty()) {
+      const teamLeader = nodeQueue.dequeue();
+      callback(teamLeader.key);
+      if (teamLeader.children) {
+        for (let i = 0; i < teamLeader.children.length; i++) {
+          nodeQueue.enqueue(teamLeader.children[i]);
+        }
+      }
+    }
   }
 }
