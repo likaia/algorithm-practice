@@ -161,4 +161,37 @@ export class TreeOperate<T> {
       }
     }
   }
+
+  /**
+   * 分行从上到下输出节点
+   * @param tree
+   * @param callback
+   */
+  topDownOutput(tree: Node<T>, callback: (key: string) => void): void {
+    if (tree == null) return;
+    const nodeQueue = new Queue();
+    nodeQueue.enqueue(tree);
+    let lineNode = "";
+    let toBeOutputted = 1;
+    let nextLevel = 0;
+    while (!nodeQueue.isEmpty()) {
+      const teamLeader = nodeQueue.dequeue();
+      lineNode += " " + teamLeader.key;
+      if (teamLeader.left) {
+        nodeQueue.enqueue(teamLeader.left);
+        nextLevel++;
+      }
+      if (teamLeader.right) {
+        nodeQueue.enqueue(teamLeader.right);
+        nextLevel++;
+      }
+      toBeOutputted--;
+      if (toBeOutputted === 0) {
+        callback(lineNode);
+        lineNode = "";
+        toBeOutputted = nextLevel;
+        nextLevel = 0;
+      }
+    }
+  }
 }

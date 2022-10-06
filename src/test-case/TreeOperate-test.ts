@@ -24,8 +24,8 @@ const node: Node<number> = {
     }
   }
 };
-treeOperateTest.traverseByLayer(node, (key) => {
-  // console.log(key);
+treeOperateTest.topDownOutput(node, (key) => {
+  console.log(key);
 });
 
 const tree: treeNode<number> = {
@@ -38,7 +38,7 @@ const tree: treeNode<number> = {
     { key: 6 }
   ]
 };
-
+// 按层遍历树结构数据
 treeOperateTest.treeDataByLayer(tree, (key) => {
   console.log(key);
 });
