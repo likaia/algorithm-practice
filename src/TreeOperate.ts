@@ -2,6 +2,7 @@ import { Node } from "./lib/Node.ts";
 import BinarySearchTree from "./lib/BinarySearchTree.ts";
 import Queue from "./lib/Queue.ts";
 import { treeNode } from "./type/TreeModuleType.ts";
+import Stack from "./lib/Stack.ts";
 
 export class TreeOperate<T> {
   /**
@@ -192,6 +193,77 @@ export class TreeOperate<T> {
         toBeOutputted = nextLevel;
         nextLevel = 0;
       }
+    }
+  }
+
+  /**
+   * 之字形打印二叉树
+   * @param tree
+   * @param callback
+   * 需要两个栈，在打印某一层的节点时把下一层的子节点保存到对应的栈里。
+   * 1. 当前打印的是奇数层，下一层则先保存左子节点再保存右子节点
+   * 2. 当前打印的是偶数层，下一层则先保存右子节点再保存左子节点
+   */
+  zigzagPrint(tree: Node<T>, callback: (key: string) => void): void {
+    const leftToRightStack = new Stack();
+    const rightToLeftStack = new Stack();
+    let curLevel = 1;
+    leftToRightStack.push(tree);
+    let lineNode = "";
+    while (!leftToRightStack.isEmpty() || !rightToLeftStack.isEmpty()) {
+      let stackTop = leftToRightStack.pop();
+      // 奇数层: 从左到右输出
+      if (curLevel % 2 === 1) {
+        lineNode += " " + stackTop.key;
+        if (leftToRightStack.isEmpty()) {
+          callback(lineNode);
+          lineNode = "";
+          curLevel++;
+        }
+        // 下一层先保存左子节点，再保存右子节点
+        this.saveNextLevelNode(rightToLeftStack, stackTop, "leftToRight");
+        continue;
+      }
+      // 偶数层: 从右到左输出
+      stackTop = rightToLeftStack.pop();
+      lineNode += " " + stackTop.key;
+      if (rightToLeftStack.isEmpty()) {
+        callback(lineNode);
+        lineNode = "";
+        curLevel++;
+      }
+      // 下一层先保存右子节点，再保存左子节点
+      this.saveNextLevelNode(leftToRightStack, stackTop, "rightToLeft");
+    }
+  }
+
+  /**
+   * 按顺序向栈里储存树的下一层的节点
+   * @param stack
+   * @param treeNode
+   * @param order
+   * @private
+   */
+  private saveNextLevelNode(
+    stack: Stack,
+    treeNode: Node<T>,
+    order: "leftToRight" | "rightToLeft"
+  ): void {
+    if (order === "leftToRight") {
+      if (treeNode.left) {
+        stack.push(treeNode.left);
+      }
+      if (treeNode.right) {
+        stack.push(treeNode.right);
+      }
+      return;
+    }
+    // 从右往左保存
+    if (treeNode.right) {
+      stack.push(treeNode.right);
+    }
+    if (treeNode.left) {
+      stack.push(treeNode.left);
     }
   }
 }
