@@ -43,51 +43,55 @@ const treeOperateTest = new TreeOperate();
 //   console.log(key);
 // });
 
-const node: Node<number> = {
-  key: 1,
-  left: {
-    key: 2,
-    left: {
-      key: 4,
-      left: {
-        key: 8
-      },
-      right: {
-        key: 9
-      }
-    },
-    right: {
-      key: 5,
-      left: {
-        key: 10
-      },
-      right: {
-        key: 11
-      }
-    }
-  },
-  right: {
-    key: 3,
-    left: {
-      key: 6,
-      left: {
-        key: 12
-      },
-      right: {
-        key: 13
-      }
-    },
-    right: {
-      key: 7,
-      left: {
-        key: 14
-      },
-      right: {
-        key: 15
-      }
-    }
-  }
-};
-treeOperateTest.zigzagPrint(node, (key) => {
-  console.log(key);
-});
+// const node: Node<number> = {
+//   key: 1,
+//   left: {
+//     key: 2,
+//     left: {
+//       key: 4,
+//       left: {
+//         key: 8
+//       },
+//       right: {
+//         key: 9
+//       }
+//     },
+//     right: {
+//       key: 5,
+//       left: {
+//         key: 10
+//       },
+//       right: {
+//         key: 11
+//       }
+//     }
+//   },
+//   right: {
+//     key: 3,
+//     left: {
+//       key: 6,
+//       left: {
+//         key: 12
+//       },
+//       right: {
+//         key: 13
+//       }
+//     },
+//     right: {
+//       key: 7,
+//       left: {
+//         key: 14
+//       },
+//       right: {
+//         key: 15
+//       }
+//     }
+//   }
+// };
+// treeOperateTest.zigzagPrint(node, (key) => {
+//   console.log(key);
+// });
+
+const arr = [5, 7, 6, 9, 11, 10, 8];
+// const arr = [7, 4, 6, 5];
+console.log("比对结果", treeOperateTest.verifySequenceOfBST(arr, arr.length));

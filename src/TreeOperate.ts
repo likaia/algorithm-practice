@@ -238,6 +238,44 @@ export class TreeOperate<T> {
   }
 
   /**
+   * 校验二叉树的后续遍历序列
+   * @param sequence
+   * @param length
+   */
+  verifySequenceOfBST(sequence: Array<number>, length: number): boolean {
+    if (sequence == null || length <= 0) return false;
+    const root = sequence[length - 1];
+    // 左子树节点的值小于根节点的值
+    let leftIndex = 0;
+    for (; leftIndex < length - 1; leftIndex++) {
+      if (sequence[leftIndex] > root) {
+        break;
+      }
+    }
+    // 右子树节点的值大于根节点的值
+    let rightIndex = leftIndex;
+    for (; rightIndex < length - 1; rightIndex++) {
+      if (sequence[rightIndex] < root) {
+        return false;
+      }
+    }
+
+    // 判断左子树是否为二叉树
+    let leftVerify = true;
+    if (leftIndex > 0) {
+      leftVerify = this.verifySequenceOfBST(sequence, leftIndex);
+    }
+    let rightVerify = true;
+    if (leftIndex < length - 1) {
+      rightVerify = this.verifySequenceOfBST(
+        sequence.slice(leftIndex + 1),
+        length - leftIndex - 1
+      );
+    }
+    return leftVerify && rightVerify;
+  }
+
+  /**
    * 按顺序向栈里储存树的下一层的节点
    * @param stack
    * @param treeNode

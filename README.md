@@ -22,6 +22,7 @@
     - 按层遍历树结构-广度优先搜索的应用
     - 分行从上到下打印二叉树
     - 之字形打印二叉树
+    - 校验二叉树的后续遍历序列
   - [StacksAndQueues.ts](src/StacksAndQueues.ts) 栈与队列相关操作的算法
     - 用队列实现栈&用栈实现队列
   - [Fibonacci.ts](src/Fibonacci.ts) 斐波那契数列的多种实现算法
@@ -37,7 +38,7 @@
 - [IntegerPower](src/IntegerPower.ts) 数值的整数次方
 - [PrintMaxNumber](src/PrintMaxNumber.ts) 打印从1到最大的n位数
 - [DeleteLinkedListNode](src/DeleteLinkedListNode.ts) 删除链表节点
-  - 用O(1)的时间复杂度删除链表节  点
+  - 用O(1)的时间复杂度删除链表节点
   - 删除链表中的重复节点
 - [RegExprMatch](src/RegExprMatch.ts) 正则表达式匹配
 - [NumericalCheck](src/NumericalCheck.ts) 数值校验算法
