@@ -23,6 +23,7 @@
     - 分行从上到下打印二叉树
     - 之字形打印二叉树
     - 校验二叉树的后续遍历序列
+    - 二叉树中和为某一值的路径
   - [StacksAndQueues.ts](src/StacksAndQueues.ts) 栈与队列相关操作的算法
     - 用队列实现栈&用栈实现队列
   - [Fibonacci.ts](src/Fibonacci.ts) 斐波那契数列的多种实现算法

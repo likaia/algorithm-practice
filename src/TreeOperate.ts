@@ -276,6 +276,62 @@ export class TreeOperate<T> {
   }
 
   /**
+   * 寻找二叉树中和为某一值的路径
+   * @param root 根节点
+   * @param expectedSum 路径的预期节点总和
+   */
+  findPath(root: Node<number>, expectedSum: number): Array<string> {
+    if (root == null) return [];
+
+    // 用一个栈来存储访问过的路径
+    const pathStack = new Stack();
+    // 存储符合条件的路径
+    const pathList: Array<string> = [];
+    // 当前已访问路径总和
+    const currentSum = 0;
+    // 从root节点开始搜索节点
+    this.searchNode(root, expectedSum, pathStack, currentSum, pathList);
+    return pathList;
+  }
+
+  /**
+   * 通过前序遍历搜索节点
+   * @param root 根节点
+   * @param expectedSum 预期总和
+   * @param pathStack 已访问的路径栈
+   * @param currentSum 已访问路径总和
+   * @param pathList 符合条件的路径
+   * @private
+   */
+  private searchNode(
+    root: Node<number>,
+    expectedSum: number,
+    pathStack: Stack,
+    currentSum: number,
+    pathList: Array<string>
+  ) {
+    // 累加当前已访问节点的和，将当前节点入栈
+    currentSum += root.key;
+    pathStack.push(root.key);
+
+    // 如果是叶节点，并且路径上节点值的和等于输入的值，则存储当前路径栈中的节点
+    const isLeaf = root.left == null && root.right == null;
+    if (currentSum == expectedSum && isLeaf) {
+      pathList.push(pathStack.toString());
+    }
+    // 非叶子节点，则遍历它的子节点
+    if (root.left != null) {
+      this.searchNode(root.left, expectedSum, pathStack, currentSum, pathList);
+    }
+    if (root.right != null) {
+      this.searchNode(root.right, expectedSum, pathStack, currentSum, pathList);
+    }
+
+    // 当前节点不符合条件，将其出栈
+    pathStack.pop();
+  }
+
+  /**
    * 按顺序向栈里储存树的下一层的节点
    * @param stack
    * @param treeNode

@@ -91,7 +91,26 @@ const treeOperateTest = new TreeOperate();
 // treeOperateTest.zigzagPrint(node, (key) => {
 //   console.log(key);
 // });
+//
+// const arr = [5, 7, 6, 9, 11, 10, 8];
+// // const arr = [7, 4, 6, 5];
+// console.log("比对结果", treeOperateTest.verifySequenceOfBST(arr, arr.length));
 
-const arr = [5, 7, 6, 9, 11, 10, 8];
-// const arr = [7, 4, 6, 5];
-console.log("比对结果", treeOperateTest.verifySequenceOfBST(arr, arr.length));
+const tree: Node<number> = {
+  key: 10,
+  left: {
+    key: 5,
+    left: {
+      key: 4
+    },
+    right: {
+      key: 7
+    }
+  },
+  right: {
+    key: 20
+  }
+};
+const targetVal = 22;
+const resultPath = treeOperateTest.findPath(tree, targetVal);
+console.log(resultPath);
