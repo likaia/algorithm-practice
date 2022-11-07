@@ -1,7 +1,7 @@
 import { Node } from "./lib/Node.ts";
 import BinarySearchTree from "./lib/BinarySearchTree.ts";
 import Queue from "./lib/Queue.ts";
-import { treeNode } from "./type/TreeModuleType.ts";
+import { codeType, treeNode } from "./type/TreeModuleType.ts";
 import Stack from "./lib/Stack.ts";
 
 export class TreeOperate<T> {
@@ -359,5 +359,32 @@ export class TreeOperate<T> {
     if (treeNode.left) {
       stack.push(treeNode.left);
     }
+  }
+
+  /**
+   * 拍平多个深层级子树
+   * Array<codeType>类型的数据转为Array<Array<string>>
+   * @param data
+   */
+  public flattenTree(data: Array<codeType<string>>): Array<Array<string>> {
+    const resultArr = [];
+    for (let i = 0; i < data.length; i++) {
+      const deepArr = [];
+      const stack = [data[i]];
+      // 深度优先搜索获取所有节点
+      while (stack.length > 0) {
+        // 取出栈顶元素
+        const stackTop = stack.pop();
+        if (stackTop) {
+          // 继续搜索子节点
+          if (stackTop.children && stackTop.children.length) {
+            stack.push(...[...stackTop.children].reverse());
+          }
+          deepArr.push(stackTop.code);
+        }
+      }
+      resultArr.push(deepArr);
+    }
+    return resultArr;
   }
 }

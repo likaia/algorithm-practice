@@ -1,6 +1,6 @@
 import { TreeOperate } from "../TreeOperate.ts";
 import { Node } from "../lib/Node.ts";
-import { treeNode } from "../type/TreeModuleType.ts";
+import { codeType, treeNode } from "../type/TreeModuleType.ts";
 
 const treeOperateTest = new TreeOperate();
 // const node: Node<number> = {
@@ -111,6 +111,20 @@ const tree: Node<number> = {
     key: 20
   }
 };
-const targetVal = 22;
-const resultPath = treeOperateTest.findPath(tree, targetVal);
-console.log(resultPath);
+// const targetVal = 22;
+// const resultPath = treeOperateTest.findPath(tree, targetVal);
+// console.log(resultPath);
+
+const dataObj: Array<codeType<string>> = [
+  {
+    code: "a0",
+    children: [{ code: "a1", children: [{ code: "a2" }] }]
+  },
+  {
+    code: "b0",
+    children: [{ code: "b1", children: [{ code: "b2" }] }]
+  }
+];
+
+const result = treeOperateTest.flattenTree(dataObj);
+console.log(result);
