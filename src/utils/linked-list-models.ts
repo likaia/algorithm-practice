@@ -1,6 +1,8 @@
 /* 链表需要的模块类 */
 
 // 助手类: 用于表示链表中的第一个以及其他元素
+import { complexListNodeType } from "../type/LinkedListModule.ts";
+
 export class Node<T> {
   element: any;
   next: any;
@@ -34,4 +36,47 @@ export function printListNode(pHead: ListNode | null): void {
     console.log(pNode.element);
     pNode = pNode.next;
   }
+}
+
+// 向链表节点插入sibling指针，将其指向特定节点
+export function insertSiblingNode(
+  listNode: complexListNodeType,
+  modifyValue: number,
+  targetValue: number | null
+): boolean {
+  let current: complexListNodeType | undefined = listNode;
+  let target: complexListNodeType | undefined = listNode;
+  let modifyIndexFindStatus = false;
+  let targetIndexFindStatus = false;
+
+  // 寻找待修改节点
+  while (current) {
+    if (current.value === modifyValue) {
+      modifyIndexFindStatus = true;
+      break;
+    }
+    current = current.next;
+  }
+  // 寻找目标节点
+  while (target) {
+    if (target.value === targetValue) {
+      targetIndexFindStatus = true;
+      break;
+    }
+    target = target.next;
+  }
+
+  // 待修改节点或者目标节点未搜索到
+  if (!modifyIndexFindStatus || !targetIndexFindStatus || !current || !target)
+    return false;
+
+  // 目标索引为null
+  if (targetValue == null) {
+    current.sibling = null;
+    return true;
+  }
+
+  // 将sibling指向目标节点
+  current.sibling = target;
+  return true;
 }
