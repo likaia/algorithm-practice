@@ -13,3 +13,7 @@ export type codeType<T> = {
   code: T;
   children?: Array<codeType<T>>;
 };
+
+export type serializeNode = {
+  nodeVal: string;
+};

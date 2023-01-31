@@ -59,3 +59,4 @@
 - [DataConversion](src/DataConversion.ts) 字符串数组转树结构
 - [CopyComplexLinkedList](src/CopyComplexLinkedList.ts) 复杂链表的复制
 - [BinaryTreeToDoublyLinkedList](src/BinaryTreeToDoublyLinkedList.ts) 二叉树转双向链表
+- [SerializedBinaryTree](src/SerializedBinaryTree.ts) 序列化二叉树
