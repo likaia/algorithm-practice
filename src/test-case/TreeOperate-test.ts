@@ -1,6 +1,6 @@
-import { TreeOperate } from "../TreeOperate.ts";
-import { Node } from "../lib/Node.ts";
-import { codeType, treeNode } from "../type/TreeModuleType.ts";
+import { TreeOperate } from "../TreeOperate";
+import { Node } from "../lib/Node";
+import { codeType, treeNode } from "../type/TreeModuleType";
 
 const treeOperateTest = new TreeOperate();
 // const node: Node<number> = {

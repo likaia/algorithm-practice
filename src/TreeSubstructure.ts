@@ -1,4 +1,4 @@
-import { BinaryTreeNode } from "./type/TreeModuleType.ts";
+import { BinaryTreeNode } from "./type/TreeModuleType";
 
 /**
  * 判断B是否为A的子结构

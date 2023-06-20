@@ -1,4 +1,4 @@
-import { ListNode } from "./utils/linked-list-models.ts";
+import { ListNode } from "./utils/linked-list-models";
 
 export class GetLinkedListNode {
   // p1指针

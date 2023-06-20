@@ -1,5 +1,5 @@
-import { defaultEquals } from "../utils/Util.ts";
-import { Node } from "../utils/linked-list-models.ts";
+import { defaultEquals } from "../utils/Util";
+import { Node } from "../utils/linked-list-models";
 
 // 定义验证函数要传的参数和返回结果
 interface equalsFnType<T> {

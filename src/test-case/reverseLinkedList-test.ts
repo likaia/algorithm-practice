@@ -1,5 +1,5 @@
-import { ReverseLinkedList } from "../ReverseLinkedList.ts";
-import LinkedList from "../lib/LinkedList.ts";
+import { ReverseLinkedList } from "../ReverseLinkedList";
+import LinkedList from "../lib/LinkedList";
 
 const linkedList = new LinkedList();
 linkedList.push(1);

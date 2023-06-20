@@ -1,5 +1,5 @@
 // 使用前序遍历将二叉树进行序列化
-import { BinaryTreeNode, serializeNode } from "./type/TreeModuleType.ts";
+import { BinaryTreeNode, serializeNode } from "./type/TreeModuleType";
 
 export class SerializedBinaryTree {
   // 反序列化已走步长

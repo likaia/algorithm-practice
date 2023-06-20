@@ -1,4 +1,4 @@
-import Stack from "./lib/Stack.ts";
+import Stack from "./lib/Stack";
 
 /**
  * 判断弹出序列是否为压入序列栈的弹出顺序

@@ -1,4 +1,4 @@
-import { BinaryTreeNode } from "./type/TreeModuleType.ts";
+import { BinaryTreeNode } from "./type/TreeModuleType";
 
 export function SymmetricBinaryTree(node: BinaryTreeNode | null): boolean {
   return isSymmetrical(node, node);

@@ -1,4 +1,4 @@
-import { BinaryTreeNode } from "./type/TreeModuleType.ts";
+import { BinaryTreeNode } from "./type/TreeModuleType";
 
 export function treeToLinkedList(
   root: BinaryTreeNode | null | undefined

@@ -1,4 +1,4 @@
-import { BinaryTreeNode } from "./type/TreeModuleType.ts";
+import { BinaryTreeNode } from "./type/TreeModuleType";
 
 export function MirrorImageOfTree(node: BinaryTreeNode | null): void {
   if (node == null) return;

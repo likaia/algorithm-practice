@@ -1,4 +1,4 @@
-import IntegerPower from "../IntegerPower.ts";
+import IntegerPower from "../IntegerPower";
 
 const powerHandler = new IntegerPower();
 const result1 = powerHandler.power(5, 6);

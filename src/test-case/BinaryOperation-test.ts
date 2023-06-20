@@ -1,4 +1,4 @@
-import BinaryOperation from "../BinaryOperation.ts";
+import BinaryOperation from "../BinaryOperation";
 
 const binaryOperation = new BinaryOperation();
 const result = binaryOperation.getBinaryOneNum(80);

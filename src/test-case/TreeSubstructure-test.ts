@@ -1,5 +1,5 @@
-import { BinaryTreeNode } from "../type/TreeModuleType.ts";
-import { TreeSubstructure } from "../TreeSubstructure.ts";
+import { BinaryTreeNode } from "../type/TreeModuleType";
+import { TreeSubstructure } from "../TreeSubstructure";
 
 const treeA: BinaryTreeNode = {
   key: 8,

@@ -1,4 +1,4 @@
-import DynamicProgramming from "../DynamicProgramming.ts";
+import DynamicProgramming from "../DynamicProgramming";
 
 const dynamicProgrammingTest = new DynamicProgramming();
 const maxVal = dynamicProgrammingTest.cutTheRope(8);

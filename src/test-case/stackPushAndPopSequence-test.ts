@@ -1,4 +1,4 @@
-import { StackPushAndPopSequence } from "../StackPushAndPopSequence.ts";
+import { StackPushAndPopSequence } from "../StackPushAndPopSequence";
 
 const pushSuite = [1, 2, 3, 4, 5];
 const popSuite1 = [4, 5, 3, 2, 1];

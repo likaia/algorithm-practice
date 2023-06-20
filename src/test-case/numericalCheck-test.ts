@@ -1,4 +1,4 @@
-import { NumericalCheck } from "../NumericalCheck.ts";
+import { NumericalCheck } from "../NumericalCheck";
 
 let str = "123.45e+6";
 const numericalCheck = new NumericalCheck();

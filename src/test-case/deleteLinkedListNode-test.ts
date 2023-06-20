@@ -1,6 +1,6 @@
-import { DeleteLinkedListNode } from "../DeleteLinkedListNode.ts";
-import LinkedList from "../lib/LinkedList.ts";
-import { printListNode } from "../utils/linked-list-models.ts";
+import { DeleteLinkedListNode } from "../DeleteLinkedListNode";
+import LinkedList from "../lib/LinkedList";
+import { printListNode } from "../utils/linked-list-models";
 
 let listNode = new LinkedList();
 listNode.push(3);

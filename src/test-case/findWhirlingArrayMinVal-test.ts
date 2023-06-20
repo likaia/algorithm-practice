@@ -1,4 +1,4 @@
-import FindWhirlingArrayMinVal from "../FindWhirlingArrayMinVal.ts";
+import FindWhirlingArrayMinVal from "../FindWhirlingArrayMinVal";
 const findWhirlingArrayMinVal = new FindWhirlingArrayMinVal();
 let whirlArray = [3, 4, 5, 1, 2];
 console.log(

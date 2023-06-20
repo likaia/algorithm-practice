@@ -1,4 +1,4 @@
-import Backtracking from "../Backtracking.ts";
+import Backtracking from "../Backtracking";
 
 const pathArr = [
   ["a", "b", "t", "g"],

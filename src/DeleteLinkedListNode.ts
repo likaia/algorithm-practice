@@ -1,4 +1,4 @@
-import { ListNode } from "./utils/linked-list-models.ts";
+import { ListNode } from "./utils/linked-list-models";
 
 export class DeleteLinkedListNode {
   deleteNode(listHead: ListNode, toBeDeleted: ListNode): ListNode | null {

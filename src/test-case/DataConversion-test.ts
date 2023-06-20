@@ -1,4 +1,4 @@
-import { DataConversion } from "../DataConversion.ts";
+import { DataConversion } from "../DataConversion";
 
 const text = `
 Language

@@ -1,6 +1,6 @@
-import { complexListNodeType } from "../type/LinkedListModule.ts";
-import { insertSiblingNode } from "../utils/linked-list-models.ts";
-import { copyComplexLinkedList } from "../CopyComplexLinkedList.ts";
+import { complexListNodeType } from "../type/LinkedListModule";
+import { insertSiblingNode } from "../utils/linked-list-models";
+import { copyComplexLinkedList } from "../CopyComplexLinkedList";
 
 const complexLinkedList: complexListNodeType = {
   value: 1,

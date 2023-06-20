@@ -1,5 +1,5 @@
-import { Compare, defaultCompare, ICompareFunction } from "../utils/Util.ts";
-import { Node } from "./Node.ts";
+import { Compare, defaultCompare, ICompareFunction } from "../utils/Util";
+import { Node } from "./Node";
 
 interface callbackFn<T> {
   (val: T): void;

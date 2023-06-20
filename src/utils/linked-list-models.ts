@@ -1,7 +1,7 @@
 /* 链表需要的模块类 */
 
 // 助手类: 用于表示链表中的第一个以及其他元素
-import { complexListNodeType } from "../type/LinkedListModule.ts";
+import { complexListNodeType } from "../type/LinkedListModule";
 
 export class Node<T> {
   element: any;

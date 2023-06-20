@@ -1,4 +1,4 @@
-import { ValuePair } from "../utils/dictionary-list-models.ts";
+import { ValuePair } from "../utils/dictionary-list-models";
 
 export default interface Map<K, V> {
   hasKey(key: K): boolean;

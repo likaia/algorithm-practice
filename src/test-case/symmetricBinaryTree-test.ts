@@ -1,5 +1,5 @@
-import { SymmetricBinaryTree } from "../SymmetricBinaryTree.ts";
-import { BinaryTreeNode } from "../type/TreeModuleType.ts";
+import { SymmetricBinaryTree } from "../SymmetricBinaryTree";
+import { BinaryTreeNode } from "../type/TreeModuleType";
 
 const tree: BinaryTreeNode = {
   key: 8,

@@ -1,4 +1,4 @@
-import { ICompareFunction, defaultCompare, Compare } from "../utils/Util.ts";
+import { ICompareFunction, defaultCompare, Compare } from "../utils/Util";
 
 export class Sort<T> {
   /**

@@ -1,4 +1,4 @@
-import Stack from "./lib/Stack.ts";
+import Stack from "./lib/Stack";
 
 export class StackContainingMinFunction extends Stack {
   private minStack: Stack;

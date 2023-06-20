@@ -1,5 +1,5 @@
-import { Sort } from "./lib/Sort.ts";
-import { HashMap } from "./lib/HashMap.ts";
+import { Sort } from "./lib/Sort";
+import { HashMap } from "./lib/HashMap";
 
 /**
  * 寻找数组中的重复数字

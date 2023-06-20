@@ -1,5 +1,5 @@
-import LinkedList from "./lib/LinkedList.ts";
-import Stack from "./lib/Stack.ts";
+import LinkedList from "./lib/LinkedList";
+import Stack from "./lib/Stack";
 
 export class LinkedListOperation<T> {
   private linkedList: LinkedList<T>;

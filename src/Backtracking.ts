@@ -1,4 +1,4 @@
-import { sumOfDigits } from "./utils/Util.ts";
+import { sumOfDigits } from "./utils/Util";
 
 export default class Backtracking<T> {
   // 目标路径在矩阵中的索引

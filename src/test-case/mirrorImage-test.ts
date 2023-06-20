@@ -1,5 +1,5 @@
-import { MirrorImageOfTree } from "../MirrorImageOfTree.ts";
-import { BinaryTreeNode } from "../type/TreeModuleType.ts";
+import { MirrorImageOfTree } from "../MirrorImageOfTree";
+import { BinaryTreeNode } from "../type/TreeModuleType";
 
 const tree: BinaryTreeNode = {
   key: 8,

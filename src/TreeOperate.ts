@@ -1,8 +1,8 @@
-import { Node } from "./lib/Node.ts";
-import BinarySearchTree from "./lib/BinarySearchTree.ts";
-import Queue from "./lib/Queue.ts";
-import { codeType, treeNode } from "./type/TreeModuleType.ts";
-import Stack from "./lib/Stack.ts";
+import { Node } from "./lib/Node";
+import BinarySearchTree from "./lib/BinarySearchTree";
+import Queue from "./lib/Queue";
+import { codeType, treeNode } from "./type/TreeModuleType";
+import Stack from "./lib/Stack";
 
 export class TreeOperate<T> {
   /**

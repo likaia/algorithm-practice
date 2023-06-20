@@ -1,4 +1,4 @@
-import { StackContainingMinFunction } from "../StackContainingMinFunction.ts";
+import { StackContainingMinFunction } from "../StackContainingMinFunction";
 
 const stackMinFn = new StackContainingMinFunction();
 stackMinFn.push(3);

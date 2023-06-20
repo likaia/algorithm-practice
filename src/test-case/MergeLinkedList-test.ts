@@ -1,5 +1,5 @@
-import { MergeLinkedList } from "../MergeLinkedList.ts";
-import LinkedList from "../lib/LinkedList.ts";
+import { MergeLinkedList } from "../MergeLinkedList";
+import LinkedList from "../lib/LinkedList";
 
 const firstLinkedList = new LinkedList();
 firstLinkedList.push(1);

@@ -1,4 +1,4 @@
-import { complexListNodeType } from "./type/LinkedListModule.ts";
+import { complexListNodeType } from "./type/LinkedListModule";
 
 export function copyComplexLinkedList(
   linkedList: complexListNodeType

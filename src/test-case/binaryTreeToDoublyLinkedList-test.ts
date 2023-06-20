@@ -1,5 +1,5 @@
-import { treeToLinkedList } from "../BinaryTreeToDoublyLinkedList.ts";
-import { BinaryTreeNode } from "../type/TreeModuleType.ts";
+import { treeToLinkedList } from "../BinaryTreeToDoublyLinkedList";
+import { BinaryTreeNode } from "../type/TreeModuleType";
 
 const tree: BinaryTreeNode = {
   key: 10,

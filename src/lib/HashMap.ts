@@ -1,6 +1,6 @@
-import { ValuePair } from "../utils/dictionary-list-models.ts";
-import { defaultToString } from "../utils/Util.ts";
-import Map from "./Map.ts";
+import { ValuePair } from "../utils/dictionary-list-models";
+import { defaultToString } from "../utils/Util";
+import Map from "./Map";
 
 export class HashMap<K, V> implements Map<K, V> {
   protected table: { [key: number]: ValuePair<K, V> };

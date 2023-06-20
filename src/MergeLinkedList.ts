@@ -1,4 +1,4 @@
-import { ListNode } from "./utils/linked-list-models.ts";
+import { ListNode } from "./utils/linked-list-models";
 
 /**
  * 合并两个排序的链表

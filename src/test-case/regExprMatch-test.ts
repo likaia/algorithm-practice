@@ -1,4 +1,4 @@
-import { RegExprMatch } from "../RegExprMatch.ts";
+import { RegExprMatch } from "../RegExprMatch";
 
 const regExprMatch = new RegExprMatch();
 let result = regExprMatch.match("dpaaab", "d.a*b");

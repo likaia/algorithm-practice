@@ -1,6 +1,6 @@
 // 栈与队列的相关操作
-import Stack from "./lib/Stack.ts";
-import Queue from "./lib/Queue.ts";
+import Stack from "./lib/Stack";
+import Queue from "./lib/Queue";
 
 export default class StacksAndQueues {
   private firstStacks: Stack;

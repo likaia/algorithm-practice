@@ -1,4 +1,4 @@
-import PrintMaxNumber from "../PrintMaxNumber.ts";
+import PrintMaxNumber from "../PrintMaxNumber";
 
 const printNumber = new PrintMaxNumber();
 printNumber.maxNumberToStr(3);

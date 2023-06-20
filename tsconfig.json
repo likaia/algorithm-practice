@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "esnext",
-    "module": "esnext",
+    "module": "CommonJS",
     "strict": true,
     "jsx": "preserve",
     "importHelpers": true,
@@ -12,9 +12,8 @@
     "sourceMap": true,
     "baseUrl": ".",
     "outDir": "./output",
-    "rootDir": "./src",
     "types": [
-      "webpack-env"
+      "node"
     ],
     "declaration": true,// 是否生成声明文件
     "declarationDir": "dist/type",// 声明文件打包的位置
@@ -25,13 +24,6 @@
       "scripthost"
     ]
   },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue",
-    "tests/**/*.ts",
-    "tests/**/*.tsx"
-  ],
   "exclude": [
     "node_modules"
   ]

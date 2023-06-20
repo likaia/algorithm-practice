@@ -1,4 +1,4 @@
-import Stack from "./lib/Stack.ts";
+import Stack from "./lib/Stack";
 
 type nodeObj = { name: string; children?: Array<nodeObj> };
 

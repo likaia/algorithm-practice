@@ -1,4 +1,4 @@
-import { PrintMatrix } from "../PrintMatrix.ts";
+import { PrintMatrix } from "../PrintMatrix";
 
 const matrix = [
   [1, 2, 3, 4],

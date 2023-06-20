@@ -1,6 +1,6 @@
-import { GetLinkedListNode } from "../GetLinkedListNode.ts";
-import LinkedList from "../lib/LinkedList.ts";
-import { ListNode } from "../utils/linked-list-models.ts";
+import { GetLinkedListNode } from "../GetLinkedListNode";
+import LinkedList from "../lib/LinkedList";
+import { ListNode } from "../utils/linked-list-models";
 
 let linkedList = new LinkedList();
 linkedList.push(1);

@@ -1,5 +1,5 @@
-import { BinaryTreeNode } from "../type/TreeModuleType.ts";
-import { SerializedBinaryTree } from "../SerializedBinaryTree.ts";
+import { BinaryTreeNode } from "../type/TreeModuleType";
+import { SerializedBinaryTree } from "../SerializedBinaryTree";
 
 const rootNode: BinaryTreeNode = {
   key: 1,

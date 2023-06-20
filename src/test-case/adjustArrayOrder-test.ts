@@ -1,4 +1,4 @@
-import { AdjustArrayOrder } from "../AdjustArrayOrder.ts";
+import { AdjustArrayOrder } from "../AdjustArrayOrder";
 
 const adjustArrayOrder = new AdjustArrayOrder();
 // 奇数在前
