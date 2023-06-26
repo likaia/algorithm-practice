@@ -63,3 +63,7 @@
 - [BinaryTreeToDoublyLinkedList](src/BinaryTreeToDoublyLinkedList.ts) 二叉树转双向链表
 - [SerializedBinaryTree](src/SerializedBinaryTree.ts) 序列化二叉树
 - [ArrayOfStrings](src/ArrayOfStrings.ts) 字符串的排列
+  - 字符串的所有排列
+  - 字符串的所有组合
+  - 正方体的构成
+  - 八皇后问题
